@@ -1,6 +1,7 @@
 from collections import defaultdict
 # %%
 
+
 def aoc_1():
     with open("inputs/2024_input_aoc_1.txt", "r", encoding="utf-8") as fd:
         lines = fd.readlines()
@@ -47,5 +48,6 @@ def aoc_2():
             result += elem * second_list[elem]
 
         print(result)
+
 
 aoc_2()

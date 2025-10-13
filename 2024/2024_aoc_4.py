@@ -64,7 +64,13 @@ def aoc_2():
         lenj = len(lines[idi])
         for idj in range(0, lenj):
             current = lines[idi][idj]
-            if current != "A" or idi == 0 or idj == 0 or idi == leni - 1 or idj == lenj - 1:
+            if (
+                current != "A"
+                or idi == 0
+                or idj == 0
+                or idi == leni - 1
+                or idj == lenj - 1
+            ):
                 continue
             checks = 0
             if lines[idi - 1][idj - 1] == "M" and lines[idi + 1][idj + 1] == "S":
@@ -72,9 +78,9 @@ def aoc_2():
             if lines[idi - 1][idj - 1] == "S" and lines[idi + 1][idj + 1] == "M":
                 checks += 1
             if lines[idi - 1][idj + 1] == "M" and lines[idi + 1][idj - 1] == "S":
-                checks +=1
+                checks += 1
             if lines[idi - 1][idj + 1] == "S" and lines[idi + 1][idj - 1] == "M":
-                checks +=1
+                checks += 1
             print("\n")
             if checks == 2:
                 result += 1
